@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Simple Website</title>
+  <title>Tsitsi Roland</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
+      font-family: 'Arial', sans-serif;
+      background: #ffffff;
       color: #333;
     }
+
+    @font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 700;
+  src: url('fonts/bricolage-grotesque-v8-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 
     /* Header image */
     .header-image {
@@ -19,23 +26,44 @@
       display: block;
     }
 
-    /* Navigation menu */
-    nav {
-      background: #333;
-      text-align: center;
-    }
+    /* Name/Header Title */
+.site-title {
+  text-align: center;
+  padding: 1em 0;
+  font-size: 1.5em;
+  font-weight: bold;
+}
 
-    nav a {
-      display: inline-block;
-      color: white;
-      padding: 1em 2em;
-      text-decoration: none;
-    }
+.light-slash {
+  color: #282828;
+  font-weight: normal;
+}
+.ampersand {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  src: url('fonts/bricolage-grotesque-v8-latin-700.woff2') format('woff2');
+  font-weight: 700;
+  font-size: 1.1em;
+  letter-spacing: 0.02em;
+}
 
-    nav a:hover {
-      background: #4CAF50;
-    }
 
+nav {
+  background: #fff;
+  text-align: center;
+}
+
+nav a {
+  display: inline-block;
+  color: #000;
+  padding: 1em 2em;
+  text-decoration: none;
+  font-weight: 700; /* Bold */
+}
+
+nav a:hover {
+  background: #f0f0f0;
+}
     /* Page content */
     main {
       padding: 2em;
@@ -43,7 +71,7 @@
     }
 
     footer {
-      background: #eee;
+      background: #ffffff;
       padding: 1em;
       text-align: center;
       font-size: 0.9em;
@@ -53,12 +81,17 @@
 </head>
 <body>
 
+  <div class="site-title">
+    Tsitsi Roland <span class="light-slash">/</span> Grafikdesign <span class="ampersand">&</span> Typografie
+  </div>  
+
   <!-- Header Image -->
   <img src="header.png" alt="Header Image" class="header-image" />
 
   <!-- Navigation -->
   <nav>
-    <a href="#contact">Contact</a>
+    <a href="contact.html">Kontakt</a>
+    <span class="nav-separator">|</span>
     <a href="portfolio.pdf">Portfolio</a>
   </nav>
 
